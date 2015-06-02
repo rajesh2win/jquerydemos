@@ -1,0 +1,14 @@
+body {
+    padding: 30px;
+}
+
+.nb {
+    display: none;
+    padding: 5px;
+    background-color: #C2F9FF;
+    border: 1px solid #000;
+}
+
+.p {
+    margin-top: 240px;
+}

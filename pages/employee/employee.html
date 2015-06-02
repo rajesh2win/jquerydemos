@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Employee Page</title>
+    <script src="../../scripts/jquery-2.1.3.min.js"></script>
+    <script src="../../scripts/jquery-ui.js"></script>
+    <script src="../../scripts/employee.js"></script>
+    <link href="../../css/jquery-ui.css" rel="stylesheet">
+    <link href="../../css/employee.css" rel="stylesheet">
+
+</head>
+<body>
+
+Employee Information
+
+<h2 class="demoHeaders">Tabs</h2>
+<div id="tabs">
+    <ul>
+        <li><a href="#listEmployees">List Of Employees</a></li>
+        <li><a href="#addEmployee">Add Employee</a></li>
+        <li><a href="#viewEmployee">View Employee</a></li>
+        <li><a href="#deleteEmployee">Delete Employee</a></li>
+    </ul>
+    <div id="listEmployees">
+        <table id="empListTable" border="5">
+            <tr>
+                <td>Employee ID</td>
+                <td>First Name</td>
+                <td>Last Name</td>
+                <td>Date Of Birth</td>
+                <td>Date Of Joining</td>
+                <td>Email ID</td>
+                <td>Phone Number</td>
+                <td>Action</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+        </table>
+    </div>
+    <div id="addEmployee">
+        <h1>Add Employee</h1>
+        <form action="#viewEmployee" id="empForm">
+            <table>
+                <tr>
+                    <td>Employee Id</td>
+                    <td><input type="text" name="empid" /></td>
+                </tr>
+                <tr>
+                    <td>First Name</td>
+                    <td><input type="text" name="firstName" /></td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td><input type="text" name="lastName" /></td>
+                </tr>
+                <tr>
+                    <td>Email Id:</td>
+                    <td><input type="text" name="emailId" /></td>
+                </tr>
+                <tr>
+                    <td>Date Of Birth</td>
+                    <td><input type="text" name="dob" id="dobdate" /></td>
+                </tr>
+                <tr>
+                    <td>Date of Joining</td>
+                    <td><input type="text" name="doj" id="dojdate"/></td>
+                </tr>
+                <tr>
+                    <td>Phone Num</td>
+                    <td><input type="text" name="phoneNum" /></td>
+                </tr>
+            </table>
+            <p><input type="submit" value="add employee" /></p>
+
+        </form>
+        <div id="result-temp"></div>
+    </div>
+    <div id="viewEmployee">
+        <table id="empViewTable">
+            <tr>
+                <td>Employee ID</td>
+                <td id="empid" class="empData"></td>
+            </tr>
+            <tr>
+                <td>First Name</td>
+                <td id="firstName" class="empData"></td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td id="lastName" class="empData"></td>
+            </tr>
+            <tr>
+                <td>Date Of Birth</td>
+                <td id="dob" class="empData"></td>
+            </tr>
+            <tr>
+                <td>Date Of Joining</td>
+                <td id="doj" class="empData"></td>
+            </tr>
+            <tr>
+                <td>Email ID</td>
+                <td id="emailId" class="empData"></td>
+            </tr>
+            <tr>
+                <td>Phone Number</td>
+                <td id="phoneNum" class="empData"></td>
+            </tr>
+            <tr>
+                <td><a href="addEmployee.html">Add Employee</a> </td>
+                <td><a href="listEmployee.html">View Employees</a> </td>
+            </tr>
+        </table>
+    </div>
+    <div id="deleteEmployee"></div>
+
+</div>
+
+</body>
+</html>

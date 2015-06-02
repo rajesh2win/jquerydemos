@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery UI Tabs - Default functionality</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <script>
+        $(function() {
+            $( "#tabs" ).tabs();
+        });
+    </script>
+</head>
+<body>
+<div id="tabs">
+    <ul>
+        <li><a href="#tabs-1">HOME</a></li>
+        <li><a href="#tabs-2">About Us</a></li>
+        <li><a href="#tabs-3">Contact</a></li>
+    </ul>
+    <div id="tabs-1">
+        <p>Home Page</p>
+        <button>Page 2</button>
+
+        <script>
+            $( "button" ).click(function() {
+                $( "#tabs" ).tabs( "option", "active", 2 );  <!-- Activate Tab Two -->
+                alert(" It ran!");
+            });
+        </script>
+
+    </div>
+    <div id="tabs-2">
+        <p>This is what we are all about.</p>
+    </div>
+    <div id="tabs-3">
+        <script>
+            $('a #tabs-3').click(function(){
+                alert("I am on the page");
+            });
+
+        </script>
+        <p>Name First Last</p>
+        <p>Town, City, Zip</p>
+    </div>
+</div>
+</body>
+</html>

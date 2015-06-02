@@ -1,0 +1,19 @@
+{
+  "person": [
+    {
+      "firstName": "ramesh",
+      "lastName": "s",
+      "age": 28
+    },
+    {
+      "firstName": "rajesh",
+      "lastName": "s",
+      "age": 32
+    },
+    {
+      "firstName": "bharat",
+      "lastName": "r",
+      "age": 27
+    }
+  ]
+}

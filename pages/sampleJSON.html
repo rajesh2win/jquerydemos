@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>How to Parse a JSON file using jQuery</title>
+
+    <style>
+        body{
+            text-align: center;
+            font-family: arial;
+        }
+
+        .button{
+            margin:20px;
+            font-size:16px;
+            font-weight: bold;
+            padding:5px 10px;
+        }
+    </style>
+
+
+</head>
+<body>
+<a href="data" target="_blank">Open JSON file</a><br />
+<input type="button" value="Get and parse JSON" class="button" />
+<br />
+<span id="results"></span>
+
+<script src="../scripts/jquery-2.1.3.min.js"></script>
+
+<script>
+
+    //When DOM loaded we attach click event to button
+    $(document).ready(function() {
+
+        //after button is clicked we download the authordata.json
+        $('.button').click(function(){
+
+            //start ajax request
+            $.ajax({
+                url: "../data/authordata.json",
+                //force to handle it as text
+                dataType: "text",
+                success: function(data) {
+
+                    //authordata.json downloaded so we call parseJSON function
+                    //and pass downloaded authordata.json
+                    var json = $.parseJSON(data);
+                    //now json variable contains authordata.json in json format
+                    //let's display a few items
+                    $('#results').html('Plugin name: ' + json.name + '<br />Author: ' + json.author.name);
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>

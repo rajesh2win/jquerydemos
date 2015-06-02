@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="../../scripts/jquery-2.1.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("li").each(function(){
+                    alert($(this).text())
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+
+<button>Alert the value of each list item</button>
+
+<ul>
+    <li>Coffee</li>
+    <li>Milk</li>
+    <li>Soda</li>
+</ul>
+
+</body>
+</html>

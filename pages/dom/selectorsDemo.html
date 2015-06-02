@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Jump for Joy</title> 
+		<link href="../../css/selectorsStyle.css" rel="stylesheet">
+	</head> 
+	<body>
+		<div id="header">
+			<h2>Jump for Joy Sale</h2>
+		</div>
+		<div id="theDiv">Discount Sale</div><br/><br/>
+		<div id="main">
+			<div class="guess_box"><img src="../../images/jump1.jpg"/></div>
+			<div class="guess_box"><img src="../../images/jump2.jpg"/></div>
+			<div class="guess_box"><img src="../../images/jump3.jpg"/></div>
+			<div class="guess_box"><img src="../../images/jump4.jpg"/></div>
+			<!--<span id="result"></span>-->
+		</div>
+		
+		<script src="../../scripts/jquery-2.1.3.min.js"></script>
+		<!--<script src="../../scripts/jqueryDemo.js"></script>-->
+		<script>
+			$(document).ready(function() {
+				// 2. select the HTML element with id 'theDiv'
+				var theDiv = $('#theDiv');
+
+				// 3. since only 1 element was selected, no traversal is necessary
+
+				// 4. modify the HTML elements CSS attributes
+				theDiv.css("border", "1px solid red");
+
+				// 5. add a click-listener function to it.
+				/*theDiv.click(function() {
+				 $('#theDiv').show(300);
+				 });*/
+
+
+				$('#theDiv').click(function() {
+					alert("Div clicked");
+				});
+
+				$(".guess_box").click( function() {
+					$(".guess_box p").remove();
+					var discount = Math.floor((Math.random()*5) + 5);
+					var discount_msg = "<p>Your Discount is "+discount+"%</p>";
+					$(this).append(discount_msg);
+				});
+			});
+		</script>
+	</body>
+</html>

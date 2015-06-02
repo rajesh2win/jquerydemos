@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Calling Rest Service</title>
+    <script src="../../scripts/jquery-2.1.3.min.js"></script>
+</head>
+<body>
+<div id="textDiv">
+    Name: <input type="text" id="username"/>
+    <input type="button" value="Get and parse JSON" class="button" />
+    <div id="results"></div>
+
+</div>
+<script>
+
+    //When DOM loaded we attach click event to button
+    $(document).ready(function() {
+
+        //input is changed we call
+        $('.button').click(function(){
+            var username = $('#username').val();
+            console.log(username);
+            //start ajax request
+            $.ajax({
+                type: "GET",
+                url: "http://localhost:9090/SystemInfo/rest/hello/" +username,
+                //force to handle it as text
+                dataType: 'jsonp',
+//                jsonpCallback : mycallback,
+                success: function(response) {
+                    console.log(response);
+                    $('#results').html('<h1>' + response.msg + '</h1>');
+                },
+                error : function(response) {
+                    console.log(response);
+                    $('#results').html('<h1> Failed to get the data</h1>');
+                }
+            });
+        });
+    });
+</script>
+</body>
+</html>
